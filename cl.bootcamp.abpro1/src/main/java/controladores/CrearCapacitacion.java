@@ -1,14 +1,14 @@
 package controladores;
 
 import java.io.IOException;
-import java.util.List;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+
 
 
 
@@ -23,7 +23,7 @@ public class CrearCapacitacion extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		javax.servlet.RequestDispatcher rd = getServletContext().getRequestDispatcher("/crearcapacitacion.jsp");
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/crearcapacitacion.jsp");
 		rd.forward(request, response);
 	}
 	
