@@ -13,16 +13,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png"
 	type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="Assets/style.css">
 <html>
-<body>
+<body id="bodycontacto">
 	<jsp:include page="navbar.jsp"></jsp:include>
 
 
-	<h2>Hello World!</h2>
-
-
-
+	<div class="container">
+<h1>tetete</h1>
+	</div>
 
 
 
