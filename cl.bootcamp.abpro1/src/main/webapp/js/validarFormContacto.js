@@ -7,7 +7,7 @@
 
 //Valido que no se envie sin antes validar
 $(document).ready(function() {
-  $("#formContacto").validate({
+  $("#contacto").validate({
     rules: {
       nombre: {
         required: true,
@@ -76,8 +76,8 @@ $(document).ready(function() {
     // Evita que el formulario se envíe antes de la validación
     event.preventDefault();
     // Si la validación es exitosa, envía el formulario
-    if ($("#formContacto").valid()) {
-      $("#formContacto")[0].submit();
+    if ($("#contacto").valid()) {
+      $("#contacto")[0].submit();
     }
   });
 });

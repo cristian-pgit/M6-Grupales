@@ -21,7 +21,7 @@
 	<body style="background-color: Lavender;" id="bodycontacto">
 	<div class="container">
 			<h1 class="text-center">Formulario de Contacto</h1>
-  		<form id="formContacto" method="POST" action="index.jsp">
+  		<form id="contacto" method="POST" action="index.jsp">
 			  <div class="form-group">
 			    <label for="nombre">Nombre de Contacto</label>
 			    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
