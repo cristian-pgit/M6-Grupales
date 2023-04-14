@@ -15,28 +15,53 @@
 	type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="Assets/style.css">
-<html>
-<body id="bodycontacto">
+
+<body id="body1">
 	<jsp:include page="navbar.jsp"></jsp:include>
 
+<div id="div1">
 
-<div class="card mb-3">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-  </div>
-</div>
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Card Title</h5>
-    <p class="card-text">This is a Wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-  </div>
-  <img src="..." class="card-img-bottom" alt="...">
+<p> 
+
 </div>
 
+<div class="card-group">
+  <div class="card">
+    <img src="Assets/prev1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Detalle</h5>
+      <p class="card-text"> • Levantamiento de condiciones de higiene y seguridad.<br>
+						    • Diagnostico en prevención de riesgos laborales<br>
+							• Asistir y apoyar en reunión de comité paritario de higiene y seguridad<br>
+							• Confección de formulario Charla<br>
+							
+</p>
+      <p class="card-text"><small class="text-body-secondary">Ultima actualizacion 3 mins atras</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="Assets/serv-2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Detalle</h5>
+      <p class="card-text"> • Gestión comité paritario de higiene y seguridad (CPHS).<br>
+							• Inspección de seguridad.<br>
+						    • Levantamiento de condiciones de higiene y seguridad.<br>
+							• Levantamiento de peligros y evaluación de riesgos.</p>
+      <p class="card-text"><small class="text-body-secondary">Ultima actualizacion 3 mins atras</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="Assets/serv-1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Detalle</h5>
+      <p class="card-text">• Procedimiento de trabajo seguro.<br>
+						   • Sistema de gestión en seguridad y salud ocupacional.<br>
+                           • Reglamento interno de orden higiene y seguridad.<br>
+                           • Adhesión Organismo Administrador.</p>
+      <p class="card-text"><small class="text-body-secondary">Ultima actualizacion 3 mins atras</small></p>
+    </div>
+  </div>
+</div>
 
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
