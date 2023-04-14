@@ -10,8 +10,28 @@
   	<description></description>
   	<servlet-class>controladores.CrearCapacitacion</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>CrearContacto</servlet-name>
+  	<display-name>CrearContacto</display-name>
+  	<description></description>
+  	<servlet-class>controladores.CrearContacto</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Inicio</servlet-name>
+  	<display-name>Inicio</display-name>
+  	<description></description>
+  	<servlet-class>controladores.Inicio</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CrearCapacitacion</servlet-name>
   	<url-pattern>/CrearCapacitacion</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CrearContacto</servlet-name>
+  	<url-pattern>/CrearContacto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Inicio</servlet-name>
+  	<url-pattern>/Inicio</url-pattern>
   </servlet-mapping>
 </web-app>
