@@ -37,12 +37,12 @@
             <li><a class="dropdown-item  d-none" href="PUpdAdministrativo">Editar Administrativo</a></li>
           </ul>
         </li>
-         <li class="nav-item dropdown"> 
+         <li class="nav-item dropdown d-none"> 
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Listar
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="ListarCapacitaciones">Listar Capacitaciones</a></li>
+            <li><a class="dropdown-item d-none" href="ListarCapacitaciones">Listar Capacitaciones</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item d-none" href="ListarUsuarios">Listar Usuarios</a></li>
             <li><a class="dropdown-item d-none" href="ListarClientes">Listar Clientes</a></li>
