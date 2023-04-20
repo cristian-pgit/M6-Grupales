@@ -9,7 +9,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png"
 	type="image/x-icon">
-<link rel="stylesheet" href="Assets/style.css">
+<link rel="stylesheet" href="resources/bootstrap.min.css">
+<link rel="stylesheet" href="resources/style.css">
 <!-- <link rel="stylesheet" href="css/Style.css"> -->
 
 

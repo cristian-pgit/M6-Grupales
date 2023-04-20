@@ -13,7 +13,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <link rel="shortcut icon" href="https://i.ibb.co/FzxxWTL/BDLY-ico.png"
 	type="image/x-icon">
-<link rel="stylesheet" href="Assets/style.css">
+<link rel="stylesheet" href="resources/bootstrap.min.css">
+<link rel="stylesheet" href="resources/style.css">
 
 </head>
 <body>
@@ -138,7 +139,7 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
 		crossorigin="anonymous"></script>
-	<script src="Assets/crearcapareg.js"></script>
+	<script src="resources/js/crearcapareg.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
