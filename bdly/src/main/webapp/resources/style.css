@@ -60,3 +60,9 @@ nav:navbar-brand{
 .navbar-form button {
     width: 100%; /* el ancho del campo de entrada y botón es igual al ancho del formulario */
 }
+
+#cuerpocrear{
+	background-color:#F8F9F9 ;
+}
+
+

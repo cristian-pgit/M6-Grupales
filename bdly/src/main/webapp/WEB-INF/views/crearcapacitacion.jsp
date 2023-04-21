@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="resources/style.css">
 
 </head>
-<body>
+<body id="cuerpocrear">
 	<jsp:include page="navbar.jsp"></jsp:include>
 	<%-- 	<c:if test="${sessionScope.userName == null}">
 		<c:redirect url="/" />
