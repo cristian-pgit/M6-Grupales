@@ -22,33 +22,37 @@
 	<%-- 	<c:if test="${sessionScope.userName == null}">
 		<c:redirect url="/" />
 	</c:if> --%>
-
-
-	<div class="container">
+<div class="container">
+	<form class="was-validated" action="CrearCapacitacion" method="post">
 		<div class="row">
 			<div class="col text-center">
 				<br>
 				<h1 class="h3 mb-3 fw-normal text-center">Crear capacitación</h1>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-5 text-center">
-				<form class="was-validated" action="CrearCapacitacion" method="post">
-					<div class="form-group">
+	
+   	<div class="row">
+	   
+	    <form class="was-validated" action="CrearCapacitacion" method="post">
+	       
+		       <div class="form-group col-md-6">
 						<label class="text-center" for="idCapacitacion">ID de
 							Capacitación:</label> <input type="number" class="form-control"
 							id="idCapacitacion" required name="idCapacitacion">
 						<div class="invalid-feedback">Favor ingrese un valor</div>
-					</div>
-					<div class="form-group">
+				</div>
+		        <div class="form-group col-md-6">
 						<label class="text-center" for="nomCapa">Nombre de la
 							Capacitacion:</label> <input type="text" required class="form-control"
 							id="nomCapa" name="nomCapa">
-						<div class="invalid-feedback">Favor ingrese nombre
-							Capacitacion</div>
-					</div>
-
-					<div class="form-group" >
+						<div class="invalid-feedback">Favor ingrese nombreCapacitacion</div>
+				</div>
+		</div>      
+	      
+		<div class="row">
+		
+			<form class="was-validated" method="post">
+		        <div class="form-group col-md-6" >
 						<label for="rutCliente">Rut de Cliente:</label> <select
 							class="form-select" required aria-label="select example"
 							id="rutCliente" name="rutCliente">
@@ -62,8 +66,8 @@
 							</c:forEach>
 						</select>
 						<div class="invalid-feedback">Favor seleccione un RUT</div>
-					</div>
-					<div class="form-group">
+				</div>
+		       <div class="form-group col-md-6">
 						<label for="dia">Día:</label> <select class="form-select" required
 							aria-label="select example" id="dia" name="dia">
 							<option value="" disabled selected hidden>Selecciona un
@@ -76,25 +80,27 @@
 							<option value="sabado">Sábado</option>
 							<option value="domingo">Domingo</option>
 						</select>
-						<div class="invalid-feedback">Favor seleccione un dia</div>
-					</div>
-			</div>
-			<div class="col-2"></div>
-			<div class="col-5 text-center">
-				<form class="was-validated" method="post">
-					<div class="form-group">
+						<div class="invalid-feedback">Favor seleccione un día</div>
+				</div>
+	       </div>
+	      
+	     
+	    <div class="row">
+		        <div class="form-group col-md-6">
 						<label class="text-center" for="hora">Ingrese Hora (xx:xx):</label> <input
 							type="time" class="form-control" id="hora" name="hora" required
 							pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$">
 						<div class="invalid-feedback">Favor ingrese una hora</div>
 					</div>
-					<div class="form-group">
+		        <div class="form-group col-md-6">
 						<label class="text-center" for="lugar">Ingrese Lugar:</label> <input
 							type="text" required class="form-control" id="lugar" name="lugar">
 						<div class="invalid-feedback">Favor ingrese una Locacion
 							donde se impartira la Capacitacion</div>
 					</div>
-					<div class="form-group">
+		 </div>
+		<div class="row">
+		       <div class="form-group col-md-6">
 						<label class="text-center" for="duracion">Duración:</label> <select
 							class="form-select" required aria-label="select example"
 							id="duracion" name="duracion">
@@ -110,19 +116,18 @@
 							<option value="240">4 Horas</option>
 						</select>
 						<div class="invalid-feedback">Favor seleccione duracion</div>
-					</div>
-					<div class="form-group">
+				</div>
+		        <div class="form-group col-md-6">
 						<label class="text-center" for="cantAsist">Cantidad de
 							Asistentes:</label> <input type="number" class="form-control"
 							id="cantAsist" required name="cantAsist">
 						<div class="invalid-feedback">Favor indique Cantidad de
 							Asistentes esperados</div>
-					</div>
-				</form>
-			</div>
-
-		</div>
-		<div class="row">
+				</div>
+		      </form>
+    </div>
+  
+	   <div class="row">
 			<div class="col text-center">
 				<br>
 				<form class="was-validated" method="post">
@@ -130,8 +135,8 @@
 				</form>
 			</div>
 		</div>
-	</div>
-
+	
+	
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
