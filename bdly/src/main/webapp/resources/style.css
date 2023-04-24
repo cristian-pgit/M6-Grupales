@@ -58,5 +58,11 @@ nav:navbar-brand{
 
 .navbar-form input,
 .navbar-form button {
-    width: 100%; /* el ancho del campo de entrada y botón es igual al ancho del formulario */
+    width: 100%; /* el ancho del campo de entrada y botón es igual al ancho del formularioo */
 }
+
+#cuerpocrear{
+	background-color:#F8F9F9 ;
+}
+
+

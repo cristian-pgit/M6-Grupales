@@ -20,11 +20,24 @@
 <body id="body1">
 	<jsp:include page="navbar.jsp"></jsp:include>
 
-<div id="div1">
-
-<p> 
-
-</div>
+<div id="div1"><br></div>
+<section class="hero" id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="mb-4">Empresa de Prevención de Riesgos</h1>
+          <p class="lead mb-4">Nuestra empresa se especializa en la prevención de riesgos laborales. Ofrecemos servicios de asesoramiento y consultoría a empresas de todos los tamaños y sectores. Nos aseguramos de que su empresa cumpla con las normas y regulaciones de seguridad en el trabajo.</p>
+          <a href="#" class="btn btn-primary">Más información</a>
+        </div>
+        <div class="col-md-6">
+          <img src="resources/img/prev4.jpg" alt="Imagen de Prevención de Riesgos" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+  
+  
 
 <div class="card-group">
   <div class="card">
