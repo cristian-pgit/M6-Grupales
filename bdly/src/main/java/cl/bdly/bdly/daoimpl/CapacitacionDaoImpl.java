@@ -47,10 +47,16 @@ public class CapacitacionDaoImpl implements CapacitacionDao {
 		return 0;
 	}
 
-	@Override
-	public void insertCapacitacion(Capacitacion capacitacion) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	  @Override 
+	  public void insertCapacitacion(int idcapa, int rutcliente, String dia, String hora, String lugar, int duracion, int cantAsist, String nomCapa) { 
+		  String sql = "INSERT INTO capacitacion (idcapacitacion, rut_Cliente, dia, hora, lugar, duracion, cantAsistentes, nombre_capacitacion VALUES "
+				  + "(?,?,?,?,?,?,?,?,?,?)"; Object[] params = {idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa}; 
+				  Capacitacion capa = jdbcTemp.queryForObject(sql, params, new CapacitacionRowMapper());
+	  }
+	 
+
+
+	
 
 }

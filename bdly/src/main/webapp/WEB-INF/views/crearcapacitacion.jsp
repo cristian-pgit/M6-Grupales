@@ -23,7 +23,7 @@
 		<c:redirect url="/" />
 	</c:if> --%>
 <div class="container">
-	<form class="was-validated" action="CrearCapacitacion" method="post">
+	<form class="was-validated" action="creacapa" method="post">
 		<div class="row">
 			<div class="col text-center">
 				<br>

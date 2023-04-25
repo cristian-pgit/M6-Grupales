@@ -12,6 +12,6 @@ public interface CapacitacionDao {
 	public List<Capacitacion> getAllCapacitaciones();
 	public int deleteCapacitacion(Integer idCapa);
 	public int updateCapacitacion(Capacitacion capacitacion);
-	public void insertCapacitacion(Capacitacion capacitacion);
+	public void insertCapacitacion(int idcapa, int rutcliente, String dia, String hora, String lugar, int duracion, int cantAsist, String nomCapa);
 
 }
