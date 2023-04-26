@@ -55,20 +55,20 @@
 				<div class="loginSector d-flex">
 					<!-- Agregamos la clase ms-auto para mover el login a la derecha -->
 					<%
-					String username = (String) session.getAttribute("userName");
+					String username = (String) session.getAttribute("username");
 					if (username != null) {
 					%>
 					<div class="d-flex ms-auto">
-						<p class="nav-link" id="texlogin">
+						<p class="nav-link text-info" id="texlogin">
 							Welcome,&nbsp;<%=username%></p>
-						<form action="Logout" method="POST">
-							<button id="btnlogout" class="btn btn-outline-success btn-sm" type="submit">Logout</button>
+						<form action="logout" method="POST">
+							<button id="btnlogout" class="btn btn-outline-danger btn-sm" type="submit">Logout</button>
 						</form>
 					</div>
 					<%
 					} else {
 					%>
-					<form class="d-flex ms-auto" role="login" action="Login" method="POST">
+					<form class="d-flex ms-auto" role="login" action="login" method="POST">
 						<input id="userName" class="form-control me-2" type="text"
 							name="username" placeholder="userName" aria-label="Username">
 						<input id="pass" class="form-control me-2" type="password"
