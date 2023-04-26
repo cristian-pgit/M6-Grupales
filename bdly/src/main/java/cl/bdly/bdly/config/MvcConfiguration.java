@@ -40,8 +40,8 @@ public class MvcConfiguration implements WebMvcConfigurer{
 		DriverManagerDataSource bds = new DriverManagerDataSource();
 		bds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		bds.setUrl("jdbc:mysql://localhost:3306/bdlydb");
-		bds.setUsername("root");
-		bds.setPassword("Larcon90");
+		bds.setUsername("Admin");
+		bds.setPassword("admin1234");
 
 		return bds;
 	}
