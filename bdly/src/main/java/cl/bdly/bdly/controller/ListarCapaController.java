@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,7 @@ import cl.bdly.bdly.models.Capacitacion;
 
 @Controller
 public class ListarCapaController {
+	private static final Logger logger = Logger.getLogger(ListarCapaController.class);
 	
 	@Autowired
 	private CapacitacionDao capaDao;
@@ -24,6 +26,7 @@ public class ListarCapaController {
 		List<Capacitacion> capacitaciones = capaDao.getAllCapacitaciones();
 		ModelAndView mav = new ModelAndView("listarcapas");
 		mav.addObject("capacitaciones", capacitaciones);
+		logger.info("Se llamó a ListarCapaController.listarclientes()");
 		return mav;
 	}
 
