@@ -12,8 +12,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import cl.bdly.bdly.dao.CapacitacionDao;
 import cl.bdly.bdly.dao.ClienteDao;
+import cl.bdly.bdly.dao.UsuarioDao;
 import cl.bdly.bdly.daoimpl.CapacitacionDaoImpl;
 import cl.bdly.bdly.daoimpl.ClienteDaoImpl;
+import cl.bdly.bdly.daoimpl.UsuarioDaoImpl;
 
 
 @Configuration
@@ -40,8 +42,8 @@ public class MvcConfiguration implements WebMvcConfigurer{
 		DriverManagerDataSource bds = new DriverManagerDataSource();
 		bds.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		bds.setUrl("jdbc:mysql://localhost:3306/bdlydb");
-		bds.setUsername("root");
-		bds.setPassword("Larcon90");
+		bds.setUsername("Admin");
+		bds.setPassword("admin1234");
 
 		return bds;
 	}
@@ -54,6 +56,11 @@ public class MvcConfiguration implements WebMvcConfigurer{
 	@Bean
 	public ClienteDao getClienteDao() {
 		return new ClienteDaoImpl(getDataSource());
+	}
+	
+	@Bean
+	public UsuarioDao getUsuarioDao() {
+		return new UsuarioDaoImpl(getDataSource());
 	}
 
 	
