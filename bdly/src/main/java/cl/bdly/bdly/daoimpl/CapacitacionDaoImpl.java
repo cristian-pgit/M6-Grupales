@@ -50,9 +50,11 @@ public class CapacitacionDaoImpl implements CapacitacionDao {
 	
 	  @Override 
 	  public void insertCapacitacion(int idcapa, int rutcliente, String dia, String hora, String lugar, int duracion, int cantAsist, String nomCapa) { 
-		  String sql = "INSERT INTO capacitacion (idcapacitacion, rut_Cliente, dia, hora, lugar, duracion, cantAsistentes, nombre_capacitacion VALUES "
-				  + "(?,?,?,?,?,?,?,?,?,?)"; Object[] params = {idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa}; 
-				  Capacitacion capa = jdbcTemp.queryForObject(sql, params, new CapacitacionRowMapper());
+		  String sql = "INSERT INTO capacitacion (idcapacitacion, rut_Cliente, dia, hora, lugar, duracion, cantAsistentes, nombre_capacitacion) VALUES "
+				  + "(?,?,?,?,?,?,?,?)"; 
+		  Object[] params = {idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa}; 
+		  int rowsAffected = jdbcTemp.update(sql, params);
+		  System.out.println("se insertaron "+ rowsAffected + " filas");
 	  }
 	 
 

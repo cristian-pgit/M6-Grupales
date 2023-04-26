@@ -22,52 +22,55 @@
 	<%-- 	<c:if test="${sessionScope.userName == null}">
 		<c:redirect url="/" />
 	</c:if> --%>
-<div class="container">
 	<form class="was-validated" action="creacapa" method="post">
-		<div class="row">
-			<div class="col text-center">
-				<br>
-				<h1 class="h3 mb-3 fw-normal text-center">Crear capacitación</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-6 text-center">
+			<br>
+			<h1 class="h3 mb-3 fw-normal text-center">Crear capacitación</h1>
+		</div>
+		<div class="col-3"></div>
+	</div>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-4">
+				<div class="form-group col-md">
+					<label class="text-center" for="idCapacitacion">ID de
+					Capacitación:</label> <input type="number" class="form-control"
+					id="idCapacitacion" required name="idCapacitacion">
+					<div class="invalid-feedback">Favor ingrese un valor</div>
+				</div>
+		</div>
+		<div class="col-4">
+			<div class="form-group col-md">
+				<label class="text-center" for="nomCapa">Nombre de la
+					Capacitacion:</label> <input type="text" required class="form-control"
+					id="nomCapa" name="nomCapa">
+				<div class="invalid-feedback">Favor ingrese nombreCapacitacion</div>
 			</div>
 		</div>
-	
-   	<div class="row">
-	   
-	    <form class="was-validated" action="CrearCapacitacion" method="post">
-	       
-		       <div class="form-group col-md-6">
-						<label class="text-center" for="idCapacitacion">ID de
-							Capacitación:</label> <input type="number" class="form-control"
-							id="idCapacitacion" required name="idCapacitacion">
-						<div class="invalid-feedback">Favor ingrese un valor</div>
-				</div>
-		        <div class="form-group col-md-6">
-						<label class="text-center" for="nomCapa">Nombre de la
-							Capacitacion:</label> <input type="text" required class="form-control"
-							id="nomCapa" name="nomCapa">
-						<div class="invalid-feedback">Favor ingrese nombreCapacitacion</div>
-				</div>
-		</div>      
-	      
-		<div class="row">
-		
-			<form class="was-validated" method="post">
-		        <div class="form-group col-md-6" >
-						<label for="rutCliente">Rut de Cliente:</label> <select
-							class="form-select" required aria-label="select example"
-							id="rutCliente" name="rutCliente">
-							<option value="" disabled selected hidden>Selecciona un
-								Rut de Cliente Existente</option>
-							<c:forEach var="client" items="${requestScope.clientes}">
-								<option value="${client.rutCliente}"><c:out
-										value="${client.nombres}" />&nbsp;
-									<c:out value="${client.apellidos}" />&nbsp;-&nbsp;
-									<c:out value="${client.rutCliente}" /></option>
-							</c:forEach>
-						</select>
-						<div class="invalid-feedback">Favor seleccione un RUT</div>
-				</div>
-		       <div class="form-group col-md-6">
+		<div class="col-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-4">
+			<div class="form-group col-md" >
+				<label for="rutCliente">Rut de Cliente:</label> <select
+					class="form-select" required aria-label="select example"
+					id="rutCliente" name="rutCliente">
+					<option value="" disabled selected hidden>Selecciona un
+						Rut de Cliente Existente</option>
+					<c:forEach var="client" items="${requestScope.clientes}">
+						<option value="${client.rutCliente}"><c:out value="${client.nombres}" />&nbsp;
+						<c:out value="${client.apellidos}" />&nbsp;-&nbsp;<c:out value="${client.rutCliente}" /></option>
+					</c:forEach>
+				</select>
+				<div class="invalid-feedback">Favor seleccione un RUT</div>
+			</div>
+		</div>
+		<div class="col-4">
+			<div class="form-group col-md">
 						<label for="dia">Día:</label> <select class="form-select" required
 							aria-label="select example" id="dia" name="dia">
 							<option value="" disabled selected hidden>Selecciona un
@@ -82,25 +85,34 @@
 						</select>
 						<div class="invalid-feedback">Favor seleccione un día</div>
 				</div>
-	       </div>
-	      
-	     
-	    <div class="row">
-		        <div class="form-group col-md-6">
+			
+		</div>
+		<div class="col-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-4">
+			<div class="form-group col-md">
 						<label class="text-center" for="hora">Ingrese Hora (xx:xx):</label> <input
 							type="time" class="form-control" id="hora" name="hora" required
 							pattern="^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$">
 						<div class="invalid-feedback">Favor ingrese una hora</div>
-					</div>
-		        <div class="form-group col-md-6">
+				</div>
+		</div>
+		<div class="col-4">
+			<div class="form-group col-md">
 						<label class="text-center" for="lugar">Ingrese Lugar:</label> <input
 							type="text" required class="form-control" id="lugar" name="lugar">
 						<div class="invalid-feedback">Favor ingrese una Locacion
 							donde se impartira la Capacitacion</div>
-					</div>
-		 </div>
-		<div class="row">
-		       <div class="form-group col-md-6">
+				</div>
+		</div>
+		<div class="col-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-2"></div>
+		<div class="col-4">
+			<div class="form-group col-md">
 						<label class="text-center" for="duracion">Duración:</label> <select
 							class="form-select" required aria-label="select example"
 							id="duracion" name="duracion">
@@ -117,26 +129,30 @@
 						</select>
 						<div class="invalid-feedback">Favor seleccione duracion</div>
 				</div>
-		        <div class="form-group col-md-6">
+		</div>
+		<div class="col-4">
+			<div class="form-group col-md">
 						<label class="text-center" for="cantAsist">Cantidad de
 							Asistentes:</label> <input type="number" class="form-control"
 							id="cantAsist" required name="cantAsist">
 						<div class="invalid-feedback">Favor indique Cantidad de
 							Asistentes esperados</div>
 				</div>
-		      </form>
-    </div>
-  
-	   <div class="row">
-			<div class="col text-center">
-				<br>
-				<form class="was-validated" method="post">
-					<button type="submit" class="btn btn-primary" id="save">Guardar</button>
-				</form>
-			</div>
 		</div>
-	
-	
+		<div class="col-2"></div>
+	</div>
+	<div class="row">
+		<div class="col-4"></div>
+		<div class="col-4 text-center">
+			<br>
+					<button type="submit" class="btn btn-outline-success" id="save">Guardar</button>
+				
+		</div>
+		<div class="col-4"></div>
+	</div>
+</div>
+</form>
+			
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

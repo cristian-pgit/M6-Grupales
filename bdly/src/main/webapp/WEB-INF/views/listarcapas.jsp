@@ -24,22 +24,22 @@
 		<h1 class="text-center py-3">Listado de Capacitaciones</h1>
 		<br>
 		<div class="table-responsive">
-			<table class="table">
+			<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>ID de Capacitación</th>
-					<th>Nombre de la Capacitacion</th>
-					<th>RUT de Cliente</th>
-					<th>Día</th>
-					<th>Hora</th>
-					<th>Lugar</th>
-					<th>Duración</th>
-					<th>Cantidad de Asistentes</th>
+					<th scope="col">ID de Capacitación</th>
+					<th scope="col">Nombre de la Capacitacion</th>
+					<th scope="col">RUT de Cliente</th>
+					<th scope="col">Día</th>
+					<th scope="col">Hora</th>
+					<th scope="col">Lugar</th>
+					<th scope="col">Duración</th>
+					<th scope="col">Cantidad de Asistentes</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="capacit" items="${requestScope.capacitaciones}">
-					<tr>
+					<tr >
 						<td><c:out value="${capacit.idCapacitacion}" /></td>
 						<td><c:out value="${capacit.nomCapa}" /></td>
 						<td><c:out value="${capacit.rutCliente}" /></td>
