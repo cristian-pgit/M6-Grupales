@@ -14,8 +14,8 @@ public class IndexController {
 	private static final Logger logger = Logger.getLogger(IndexController.class);
 	
 	@RequestMapping(value="/")
-	public ModelAndView test(HttpServletResponse response) throws IOException{
-		logger.info("Se llamó a Index.ModelAndView()");
+	public ModelAndView Index(HttpServletResponse response) throws IOException{
+		logger.info("Se llama a Index.ModelAndView(). Despliega vista inicial ");
 		return new ModelAndView("home");
 	}
 

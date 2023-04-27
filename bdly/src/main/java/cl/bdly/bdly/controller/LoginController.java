@@ -36,7 +36,7 @@ public class LoginController {
 			session.setAttribute("username", username);
 			String perfil = user.getPerfil();
 			session.setAttribute("perfil", perfil);
-			logger.info("Se llamó a LoginController.login()");
+			logger.info("Se llama a LoginController.login(). Para remitir user y pass haciendo login");
 			System.out.println("Se ha conectado: "+user.getUserName()+"  y su perfil es: "+perfil);
 			return new ModelAndView("home");
 		} catch (Exception e) {
@@ -54,7 +54,7 @@ public class LoginController {
 	    System.out.println("Se ha Deslogueado: "+ session.getAttribute("username"));
 	    session.removeAttribute("username");
 	    session.removeAttribute("perfil");
-	    logger.info("Se llamó a LoginController.logout()");
+	    logger.info("Se llama a LoginController.logout(). para cerrar sesion");
 	    System.out.println("perfil actual:"+ session.getAttribute("perfil"));
 	    return new ModelAndView("home");
 	}

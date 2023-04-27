@@ -15,7 +15,7 @@ public class ContactoController {
 	
 	@RequestMapping(value="/contacto")
 	public ModelAndView test(HttpServletResponse response) throws IOException{
-		logger.info("Se llamó a ContactoController.contacto()");
+		logger.info("Se llama a ContactoController.contacto() para desplegar formulario de contacto");
 		return new ModelAndView("contacto");
 	}
 
