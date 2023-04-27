@@ -6,11 +6,11 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import cl.bdly.bdly.dao.ClienteDao;
+import cl.bdly.bdly.dao.IClienteDao;
 import cl.bdly.bdly.mappers.ClienteRowMapper;
 import cl.bdly.bdly.models.Cliente;
 
-public class ClienteDaoImpl implements ClienteDao {
+public class ClienteDaoImpl implements IClienteDao {
 	
 	private JdbcTemplate jdbcTemp;
 	

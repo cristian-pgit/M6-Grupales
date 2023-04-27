@@ -11,7 +11,23 @@ public class Capacitacion {
 	private int cantAsist;
 	private String nomCapa;
 	
+	public Capacitacion() {};
 	
+	public Capacitacion(Integer idCapacitacion, Integer rutCliente, String dia, String hora, String lugar, int duracion,
+			int cantAsist, String nomCapa) {
+		super();
+		this.idCapacitacion = idCapacitacion;
+		this.rutCliente = rutCliente;
+		this.dia = dia;
+		this.hora = hora;
+		this.lugar = lugar;
+		this.duracion = duracion;
+		this.cantAsist = cantAsist;
+		this.nomCapa = nomCapa;
+	}
+
+
+
 	public int getIdCapacitacion() {
 		return idCapacitacion;
 	}

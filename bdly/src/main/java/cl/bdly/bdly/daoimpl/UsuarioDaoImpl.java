@@ -6,11 +6,11 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import cl.bdly.bdly.dao.UsuarioDao;
+import cl.bdly.bdly.dao.IUsuarioDao;
 import cl.bdly.bdly.mappers.UsuarioRowMapper;
 import cl.bdly.bdly.models.Usuario;
 
-public class UsuarioDaoImpl implements UsuarioDao {
+public class UsuarioDaoImpl implements IUsuarioDao {
 	
 	private JdbcTemplate jdbcTemp;
 	

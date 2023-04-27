@@ -6,11 +6,11 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import cl.bdly.bdly.dao.ContactoDao;
+import cl.bdly.bdly.dao.IContactoDao;
 import cl.bdly.bdly.mappers.ContactoRowMapper;
 import cl.bdly.bdly.models.Contacto;
 
-public class ContactoDaoImpl implements ContactoDao {
+public class ContactoDaoImpl implements IContactoDao {
 	
 	private JdbcTemplate jdbcTemp;
 	

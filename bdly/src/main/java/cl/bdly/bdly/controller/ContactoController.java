@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import cl.bdly.bdly.dao.ContactoDao;
+import cl.bdly.bdly.dao.IContactoDao;
 import cl.bdly.bdly.models.Contacto;
 
 @Controller
@@ -21,7 +21,7 @@ public class ContactoController {
 	private static final Logger logger = Logger.getLogger(ContactoController.class);
 	
 	@Autowired
-	ContactoDao conDao;
+	IContactoDao conDao;
 	
 	@RequestMapping(value="/contacto")
 	public ModelAndView test(HttpServletResponse response) throws IOException{

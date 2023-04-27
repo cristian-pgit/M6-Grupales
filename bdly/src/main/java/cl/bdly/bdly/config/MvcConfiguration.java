@@ -10,10 +10,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import cl.bdly.bdly.dao.CapacitacionDao;
-import cl.bdly.bdly.dao.ClienteDao;
-import cl.bdly.bdly.dao.ContactoDao;
-import cl.bdly.bdly.dao.UsuarioDao;
+import cl.bdly.bdly.dao.ICapacitacionDao;
+import cl.bdly.bdly.dao.IClienteDao;
+import cl.bdly.bdly.dao.IContactoDao;
+import cl.bdly.bdly.dao.IUsuarioDao;
 import cl.bdly.bdly.daoimpl.CapacitacionDaoImpl;
 import cl.bdly.bdly.daoimpl.ClienteDaoImpl;
 import cl.bdly.bdly.daoimpl.ContactoDaoImpl;
@@ -51,22 +51,22 @@ public class MvcConfiguration implements WebMvcConfigurer{
 	}
 	
 	@Bean
-	public CapacitacionDao getCapacitacionDao() {
+	public ICapacitacionDao getCapacitacionDao() {
 		return new CapacitacionDaoImpl(getDataSource());
 	}
 	
 	@Bean
-	public ClienteDao getClienteDao() {
+	public IClienteDao getClienteDao() {
 		return new ClienteDaoImpl(getDataSource());
 	}
 	
 	@Bean
-	public UsuarioDao getUsuarioDao() {
+	public IUsuarioDao getUsuarioDao() {
 		return new UsuarioDaoImpl(getDataSource());
 	}
 	
 	@Bean
-	public ContactoDao getContactoDao() {
+	public IContactoDao getContactoDao() {
 		return new ContactoDaoImpl(getDataSource());
 	}
 

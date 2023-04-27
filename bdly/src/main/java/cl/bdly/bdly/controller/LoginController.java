@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import cl.bdly.bdly.dao.UsuarioDao;
+import cl.bdly.bdly.dao.IUsuarioDao;
 import cl.bdly.bdly.models.Usuario;
 
 
@@ -23,7 +23,7 @@ public class LoginController {
 	private static final Logger logger = Logger.getLogger(LoginController.class);
 	
 	@Autowired
-	private UsuarioDao usuarioDao;
+	private IUsuarioDao iUsuarioDao;
 	
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
@@ -31,7 +31,7 @@ public class LoginController {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		try {
-			Usuario user = usuarioDao.getUsuarioByUsernameAndPassword(username, password);
+			Usuario user = iUsuarioDao.getUsuarioByUsernameAndPassword(username, password);
 			HttpSession session = request.getSession();
 			session.setAttribute("username", username);
 			String perfil = user.getPerfil();

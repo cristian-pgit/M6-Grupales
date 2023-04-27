@@ -11,8 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import cl.bdly.bdly.dao.CapacitacionDao;
-import cl.bdly.bdly.dao.ClienteDao;
+import cl.bdly.bdly.dao.ICapacitacionDao;
+import cl.bdly.bdly.dao.IClienteDao;
 import cl.bdly.bdly.models.Capacitacion;
 import cl.bdly.bdly.models.Cliente;
 
@@ -23,10 +23,10 @@ public class CapacitacionController {
 	private static final Logger logger = Logger.getLogger(CapacitacionController.class);
 	
 	@Autowired
-	CapacitacionDao capaDao;
+	ICapacitacionDao capaDao;
 	
 	@Autowired
-	ClienteDao cliDao;
+	IClienteDao cliDao;
 	
 	/*
 	 * @RequestMapping(value="/crearcapacitacion") public ModelAndView
@@ -55,14 +55,22 @@ public class CapacitacionController {
 		int cantAsist = Integer.parseInt(request.getParameter("cantAsist"));
 		String nomCapa = request.getParameter("nomCapa");
 		try {
-			capaDao.insertCapacitacion(idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa);
-			Capacitacion capa = getCapa(idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa);
-			System.out.println("Se ha creado la siguiente capacitacion: "+capa);
-			logger.info("CapacitacionController.crearcapa() creo una capacitacion exitosamente");
-			return new ModelAndView("crearcapacitacion");
+			Capacitacion capa = new Capacitacion(idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa);
+			if(capaDao.crearCapacitacion(capa)==true) {
+				System.out.println("Se ha creado la siguiente capacitacion: "+capa);
+				logger.info("CapacitacionController.crearcapa() creo una capacitacion exitosamente");
+				ModelAndView mav = new ModelAndView("crearcapacitacion");
+		        mav.addObject("message", "Capacitacion creada Exitosamente");
+		        return mav;
+			} else {
+				ModelAndView mav = new ModelAndView("crearcapacitacion");
+		        mav.addObject("message", "Error al Crear la Capacitacion");
+		        logger.info("Se llama a CapacitacionController.crearcapa() pero fallo al crearla");
+		        return mav;
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
-	        ModelAndView mav = new ModelAndView("crearcapacitacion");
+			ModelAndView mav = new ModelAndView("crearcapacitacion");
 	        mav.addObject("message", "Error al Crear la Capacitacion");
 	        logger.info("Se llama a CapacitacionController.crearcapa() pero fallo al crearla");
 	        return mav;
@@ -70,18 +78,5 @@ public class CapacitacionController {
 		
 	}
 
-	private Capacitacion getCapa(int idcapa, int rutcliente, String dia, String hora, String lugar, int duracion,
-			int cantAsist, String nomCapa) {
-		Capacitacion capa = new Capacitacion();
-		capa.setIdCapacitacion(idcapa);
-		capa.setRutCliente(rutcliente);
-		capa.setDia(dia);
-		capa.setHora(hora);
-		capa.setLugar(lugar);
-		capa.setDuracion(duracion);
-		capa.setCantAsist(cantAsist);
-		capa.setNomCapa(nomCapa);
-		return capa;
-	}
 
 }
