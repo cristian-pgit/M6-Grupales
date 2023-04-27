@@ -12,7 +12,7 @@ import cl.bdly.bdly.models.Usuario;
 
 public class UsuarioDaoImpl implements UsuarioDao {
 	
-private JdbcTemplate jdbcTemp;
+	private JdbcTemplate jdbcTemp;
 	
 	public UsuarioDaoImpl(DataSource  dataSource	) {
 		this.jdbcTemp = new JdbcTemplate(dataSource);
@@ -34,8 +34,10 @@ private JdbcTemplate jdbcTemp;
 
 	@Override
 	public List<Usuario> getAllUsuario() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "SELECT idUsuario, userName, password, fNacimiento, run, perfil FROM usuario";
+		List<Usuario> user = jdbcTemp.query(sql, new UsuarioRowMapper());
+		
+		return user;
 	}
 
 	@Override

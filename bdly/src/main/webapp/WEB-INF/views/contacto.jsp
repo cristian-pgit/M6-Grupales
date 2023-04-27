@@ -18,30 +18,39 @@
 <!-- Incluimos los archivos CSS de Bootstrap -->
 </head>
 
-	<%@include file="navbar.jsp"%>
+<jsp:include page="navbar.jsp"></jsp:include>
+	
+	
 	<body style="background-color: Lavender;" id="bodycontacto">
 	<div class="container">
 			<h1 class="text-center">Formulario de Contacto</h1>
-  		<form id="contacto" method="POST" action="index.jsp">
+			
+			
+  		<form class="was-validated" id="contacto" action="enviarMsg" method="POST" >
 			  <div class="form-group">
 			    <label for="nombre">Nombre de Contacto</label>
 			    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
-			    <div class="invalid-feedback"></div> <!-- Aquí se mostrará el mensaje de error -->
+			    <div class="invalid-feedback">Favor ingrese nombre o nombres</div> <!-- Aquí se mostrará el mensaje de error -->
+			  </div>
+			  <div class="form-group">
+			    <label for="asunto">Apellido</label>
+			    <input type="text" class="form-control" id="apellido" name="asunto" placeholder="apellido" required>
+			    <div class="invalid-feedback">Favor ingrese nombre o apellidos</div> <!-- Aquí se mostrará el mensaje de error -->
 			  </div>
 			  <div class="form-group">
 			    <label for="email">Correo Electrónico</label>
 			    <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electrónico" required>
-			    <div class="invalid-feedback"></div> <!-- Aquí se mostrará el mensaje de error -->
+			    <div class="invalid-feedback">Ingrese un correo electronico valido</div> <!-- Aquí se mostrará el mensaje de error -->
 			  </div>
 			  <div class="form-group">
-			    <label for="asunto">Asunto</label>
-			    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto" required>
-			    <div class="invalid-feedback"></div> <!-- Aquí se mostrará el mensaje de error -->
+			    <label for="email">telefono</label>
+			    <input type="number" class="form-control" id="phone" name="phone" placeholder="telefono de contacto" required>
+			    <div class="invalid-feedback">Favor ingrese telefono de contacto</div> <!-- Aquí se mostrará el mensaje de error -->
 			  </div>
 			  <div class="form-group">
 			    <label for="mensaje">Mensaje</label>
 			    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Mensaje" required></textarea>
-			    <div class="invalid-feedback"></div> <!-- Aquí se mostrará el mensaje de error -->
+			    <div class="invalid-feedback">Favor escriba el mensaje</div> <!-- Aquí se mostrará el mensaje de error -->
 			  </div>
 			  <br>
 			  

@@ -44,7 +44,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item " href="listarcapacitaciones">Listar Capacitaciones</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item d-none" href="ListarUsuarios">Listar Usuarios</a></li>
+            <li><a class="dropdown-item" href="mostrarusuarios">Listar Usuarios</a></li>
             <li><a class="dropdown-item d-none" href="ListarClientes">Listar Clientes</a></li>
             <li><a class="dropdown-item d-none" href="ListarProfesionales">Listar Profesionales</a></li>
             <li><a class="dropdown-item d-none" href="ListarAdministrativos">Listar Administrativos</a></li>

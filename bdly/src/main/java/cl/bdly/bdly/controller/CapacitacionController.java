@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,8 @@ public class CapacitacionController {
 	public ModelAndView listarclientes() {
 		List<Cliente> clientes = cliDao.getAllClientes();
 		ModelAndView mav = new ModelAndView("crearcapacitacion");
-		logger.info("Se llamó a CapacitacionController.listarclientes()");
+		logger.info("Se llamó a CapacitacionController.listarclientes()."
+				+ " Esto habilita que la lista de rut de clientes esten disponibles para la creacion de Capacitaciones");
 		mav.addObject("clientes", clientes);
 		return mav;
 	}
@@ -56,13 +58,13 @@ public class CapacitacionController {
 			capaDao.insertCapacitacion(idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa);
 			Capacitacion capa = getCapa(idcapa, rutcliente, dia, hora, lugar, duracion, cantAsist, nomCapa);
 			System.out.println("Se ha creado la siguiente capacitacion: "+capa);
-			logger.info("Se llamó a CapacitacionController.crearcapa() exitosamente");
+			logger.info("CapacitacionController.crearcapa() creo una capacitacion exitosamente");
 			return new ModelAndView("crearcapacitacion");
 		} catch (Exception e) {
 			e.printStackTrace();
 	        ModelAndView mav = new ModelAndView("crearcapacitacion");
 	        mav.addObject("message", "Error al Crear la Capacitacion");
-	        logger.info("Se llamó a CapacitacionController.crearcapa() pero fallo al crearla");
+	        logger.info("Se llama a CapacitacionController.crearcapa() pero fallo al crearla");
 	        return mav;
 		}
 		

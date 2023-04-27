@@ -15,8 +15,8 @@ public class InicioController {
 	private Logger logger = Logger.getLogger(InicioController.class);
 	
 	@RequestMapping(value="/inicio")
-	public ModelAndView test(HttpServletResponse response) throws IOException{
-		logger.info("Se llamó a Inicio.ModelAndView()");
+	public ModelAndView inicio(HttpServletResponse response) throws IOException{
+		logger.info("Se llama a Inicio.inicio().");
 		return new ModelAndView("inicio");
 	}
 

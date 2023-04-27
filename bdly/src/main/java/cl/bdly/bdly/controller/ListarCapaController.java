@@ -26,7 +26,7 @@ public class ListarCapaController {
 		List<Capacitacion> capacitaciones = capaDao.getAllCapacitaciones();
 		ModelAndView mav = new ModelAndView("listarcapas");
 		mav.addObject("capacitaciones", capacitaciones);
-		logger.info("Se llamó a ListarCapaController.listarclientes()");
+		logger.info("Se llama a ListarCapaController.listarCapacitaciones(). Para desplegar las capaciones existentes desde DB");
 		return mav;
 	}
 

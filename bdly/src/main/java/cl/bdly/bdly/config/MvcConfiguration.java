@@ -12,9 +12,11 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import cl.bdly.bdly.dao.CapacitacionDao;
 import cl.bdly.bdly.dao.ClienteDao;
+import cl.bdly.bdly.dao.ContactoDao;
 import cl.bdly.bdly.dao.UsuarioDao;
 import cl.bdly.bdly.daoimpl.CapacitacionDaoImpl;
 import cl.bdly.bdly.daoimpl.ClienteDaoImpl;
+import cl.bdly.bdly.daoimpl.ContactoDaoImpl;
 import cl.bdly.bdly.daoimpl.UsuarioDaoImpl;
 
 
@@ -61,6 +63,11 @@ public class MvcConfiguration implements WebMvcConfigurer{
 	@Bean
 	public UsuarioDao getUsuarioDao() {
 		return new UsuarioDaoImpl(getDataSource());
+	}
+	
+	@Bean
+	public ContactoDao getContactoDao() {
+		return new ContactoDaoImpl(getDataSource());
 	}
 
 	
