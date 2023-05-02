@@ -26,7 +26,7 @@
 		<!-- Section: Text -->
 		<section class="mb-4">
 			<p>Somos Especialistas en Sistemas de Gestión de Calidad,
-				Prevención de Riesgos, Medio Ambiente, Normas ISO, Almacenamiento y
+				Prevención de Riesgos, Medio Ambiente, Norma ISO, Almacenamiento y
 				Transporte de Sustancias Peligrosas (SHTC), Permisos Ambientales y
 				cumplimiento Legal.</p>
 		</section>
