@@ -15,22 +15,28 @@
 <!-- Incluimos los archivos CSS de Bootstrap -->	
 <link rel="stylesheet" href="../resources/bootstrap.min.css">
 <link rel="stylesheet" href="../resources/style.css">
+<link rel="stylesheet" href="../resources/contcor.css">
 <!-- <link rel="stylesheet" href="css/Style.css"> -->
 </head>
-	
-
+<body style="background-color: Lavender;" id="bodycontacto">
 
 <jsp:include page="navbar.jsp"></jsp:include>
-	
-	
-	<body style="background-color: Lavender;" id="bodycontacto">
+
+<form:form class="was-validated" id="contacto" action="creacontacto" method="POST"  modelAttribute="contacto">
+<form:hidden path="idContacto" />
+
 	<div class="container">
-			<h1 class="text-center">Formulario de Contacto</h1>
-			<form:hidden path="idContacto" />
-			
-			
-  		<form:form class="was-validated" id="contacto" action="enviarMsg" method="POST"  modelAttribute="contacto">
-			  <div class="form-group">
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-sm-6 text-center">
+				<h1 class="text-center">Formulario de Contacto</h1>
+			</div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-sm-6 text-center">
+				<div class="form-group">
 			    <label for="nombre">Nombre de Contacto</label>
 			    <form:input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required="true" path="contacName" />
 			    <div class="invalid-feedback">Favor ingrese nombre o nombres</div> <!-- Aquí se mostrará el mensaje de error -->
@@ -50,16 +56,24 @@
 			    <form:textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="mensaje" required="true" path="mensaje"></form:textarea>
 			    <div class="invalid-feedback">Favor escriba el mensaje</div> <!-- Aquí se mostrará el mensaje de error -->
 			  </div>
-			  <br>
+			</div>
+			<div class="col"></div>
+		</div>
+		<div class="row">
+			<div class="col"></div>
+			<div class="col-sm-6 text-center">
+				<br>
 			  
-		  	 <button type="submit" class="btn btn-primary">Enviar</button>
-		  
-	</form:form>
-	</div>	
+		  	 	<button type="submit" class="btn btn-primary">Enviar</button>
+			</div>
+			<div class="col"></div>
+		</div>	
+	</div>	<!-- <--fin de contenedor -->
+</form:form>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-<script src="js/validaFormContacto.js"></script>
+<script src="../resources/js/enviarcontacto.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
