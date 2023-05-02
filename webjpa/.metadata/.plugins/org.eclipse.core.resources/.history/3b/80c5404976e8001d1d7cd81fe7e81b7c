@@ -1,0 +1,5 @@
+package cl.bdly.modelo;
+
+public class Usuario {
+
+}

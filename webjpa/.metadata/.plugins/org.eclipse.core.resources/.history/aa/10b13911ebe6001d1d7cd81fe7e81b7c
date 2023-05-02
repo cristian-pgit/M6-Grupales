@@ -1,0 +1,13 @@
+package cl.naitsirc.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import cl.naitsirc.entity.Usuario;
+
+@Repository("usuarioRepository")
+public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+	
+	Usuario findByUsernameAndPassword(Usuario usuario);
+
+}

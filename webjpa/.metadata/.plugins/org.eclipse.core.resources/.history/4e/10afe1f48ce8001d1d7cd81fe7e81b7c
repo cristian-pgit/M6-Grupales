@@ -1,0 +1,32 @@
+package cl.bdly.modelo;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
+import javax.persistence.OneToOne;
+
+@Entity
+@Table(name = "profesional")
+public class Profesional {
+	
+	@Id
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_profesional")
+	private Usuario idProfesional;
+	
+	@Column(name = "titulo_profesional", nullable=false)
+	@Size(min=10, max=50)
+	private String titulo;
+	
+	@Column(name = "fecha_ingreso")
+	private Date fechaIng; 
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package cl.naitsirc.repository;
+
+public interface ClienteRepository {
+
+}

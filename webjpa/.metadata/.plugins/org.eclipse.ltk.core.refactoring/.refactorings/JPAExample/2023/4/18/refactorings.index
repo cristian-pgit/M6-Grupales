@@ -1,0 +1,6 @@
+1682741175562	Move 'index.jsp' to 'webapp'
+1682741334122	Rename package 'cl.naitsircl.service'
+1682744198019	Rename type 'JpaConfig'
+1682744219143	Rename type 'WebAppInitializer'
+1682744346606	Rename type 'PersistanceJPAConfig'
+1682809908878	Delete element

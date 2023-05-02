@@ -1,0 +1,5 @@
+package cl.bdly.repositorio;
+
+public interface CapacitacionRepository {
+
+}

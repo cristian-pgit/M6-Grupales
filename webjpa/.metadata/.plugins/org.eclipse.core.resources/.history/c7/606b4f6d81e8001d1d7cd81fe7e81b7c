@@ -1,0 +1,5 @@
+package cl.bdly.config;
+
+public class AppInitializer {
+
+}

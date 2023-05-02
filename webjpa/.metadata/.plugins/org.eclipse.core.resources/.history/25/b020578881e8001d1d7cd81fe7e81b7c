@@ -1,0 +1,31 @@
+package cl.bdly.config;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import cl.bdly.config.PersistenceJPAConfig;
+import cl.bdly.config.WebMvcConfig;
+
+public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer  {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		return new String[] {
+	            "/"
+	        };
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class[] {
+	            PersistenceJPAConfig.class
+	        };
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		 return new Class[] {
+		            WebMvcConfig.class
+		        };
+	}
+
+}
