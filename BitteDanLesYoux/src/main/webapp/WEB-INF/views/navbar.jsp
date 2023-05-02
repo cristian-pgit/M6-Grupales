@@ -14,14 +14,14 @@
           <a class="nav-link active" aria-current="page" href="/BitteDanLesYoux/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="contacto/nuevocontacto">Contacto</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Crear
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Crear Capacitacion</a></li>
+            <li><a class="dropdown-item" href="capacitaciones/nuevacapa">Crear Capacitacion</a></li>
             <li><a class="dropdown-item d-none" href="#">Crear Usuario</a></li>
           </ul>
         </li>
