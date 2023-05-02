@@ -1,7 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\Naitsirc\eclipse-web-workspace\webjpa\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2827418599.index
-\BitteDanLesYoux\src\main\java
-C:\Users\Naitsirc\eclipse-web-workspace\webjpa\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1171417163.index
-\JPAExample\src\main\java
-C:\Users\Naitsirc\eclipse-web-workspace\webjpa\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3161565143.index
-\JPAExample\src\main\java

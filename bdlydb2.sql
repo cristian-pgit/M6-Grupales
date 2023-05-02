@@ -60,7 +60,7 @@ CREATE TABLE `capacitacion` (
   `nombre_capacitacion` varchar(255) DEFAULT NULL,
   `rutCliente` int DEFAULT NULL,
   PRIMARY KEY (`id_capacitacion`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,6 +69,7 @@ CREATE TABLE `capacitacion` (
 
 LOCK TABLES `capacitacion` WRITE;
 /*!40000 ALTER TABLE `capacitacion` DISABLE KEYS */;
+INSERT INTO `capacitacion` VALUES (1,15,'Lunes','120','08:00','UNAB Sala 302','Protocolo Anti Sismo',11222333),(2,23,'Miercoles','60','09:00','UNAB Sala 302','Protocolo Anti Caidas',22333444),(3,34,'Viernes','180','10:00','UNAB Sala 302','Protocolo Higiene',33444555);
 /*!40000 ALTER TABLE `capacitacion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +94,7 @@ CREATE TABLE `cliente` (
   `id_usuario` int NOT NULL,
   PRIMARY KEY (`id_cliente`),
   KEY `FKetx0tojxf5yevxcyt6qb526x5` (`id_usuario`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,6 +103,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
+INSERT INTO `cliente` VALUES (1,'AFP Provida','Casas','Stgo','La Cerca 190',34,12341234,'Armando',11222333,2,1),(2,'AFP Provida','Mento','Stgo','La Casa 189',34,12341234,'Lola',22333444,2,2),(3,'AFP Cuprum','Bizama','Vina','La Cruz 123',46,12341234,'Gilberto',33444555,1,3);
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +150,7 @@ CREATE TABLE `usuario` (
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `UK_boxe2nbk8bf7qn3s3ig45xb69` (`run`),
   UNIQUE KEY `UK_863n1y3x0jalatoir4325ehal` (`username`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,6 +159,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,'1986-01-18 00:00:00','pedro100%','Cliente',11111111,'PedroMillones'),(2,'1986-08-04 00:00:00','mirtha100%','Cliente',22222222,'MirthaMillones'),(3,'1970-05-28 00:00:00','gilberto100%','Cliente',33333333,'GilbertoBizama');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -169,4 +172,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-01 22:47:05
+-- Dump completed on 2023-05-01 23:17:22

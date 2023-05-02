@@ -1,5 +1,0 @@
-INDEX VERSION 1.4+C:\Users\Naitsirc\eclipse-web-workspace\webjpa\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1171417163.index
-2827418599.index
-979656536.index
-1004771102.index

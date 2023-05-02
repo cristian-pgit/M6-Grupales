@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Mon May 01 22:43:24 CLT 2023
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Naitsirc\\.m2\\repository\\org\\springframework\\spring-web\\5.3.27\\spring-web-5.3.27.jar=WEB-INF/lib/spring-web-5.3.27.jar
