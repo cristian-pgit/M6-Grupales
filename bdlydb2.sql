@@ -108,6 +108,33 @@ INSERT INTO `cliente` VALUES (1,'AFP Provida','Casas','Stgo','La Cerca 190',34,1
 UNLOCK TABLES;
 
 --
+-- Table structure for table `contacto`
+--
+
+DROP TABLE IF EXISTS `contacto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `contacto` (
+  `id_contacto` int NOT NULL AUTO_INCREMENT,
+  `nombre_contacto` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mensaje` varchar(500) DEFAULT NULL,
+  `telefono` int DEFAULT NULL,
+  PRIMARY KEY (`id_contacto`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contacto`
+--
+
+LOCK TABLES `contacto` WRITE;
+/*!40000 ALTER TABLE `contacto` DISABLE KEYS */;
+INSERT INTO `contacto` VALUES (1,'Contacto de Prueba','mensaje@deprueba.cl','Mensaje de Prueba',12341234);
+/*!40000 ALTER TABLE `contacto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `profesional`
 --
 
@@ -172,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-01 23:17:22
+-- Dump completed on 2023-05-02 22:35:51

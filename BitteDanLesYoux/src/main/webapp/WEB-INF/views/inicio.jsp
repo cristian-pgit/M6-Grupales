@@ -15,8 +15,6 @@
 	type="image/x-icon">
 <link rel="stylesheet" href="resources/bootstrap.min.css">
 <link rel="stylesheet" href="resources/style.css">
-<!-- Importar FontAwesome -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
@@ -78,9 +76,8 @@
       <p class="card-text"><small class="text-body-secondary">Ultima actualizacion 3 mins atras</small></p>
     </div>
   </div>
-</div><br><br>
+</div>
 
-<jsp:include page="footer.jsp"></jsp:include>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
